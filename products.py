@@ -8,3 +8,5 @@ while True :
 	products.append([name,price]) #二維清單 （同個位置有多個input)
 print (products)
 
+for p in products:
+	print (p[0], '的價格是', p[1])
