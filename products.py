@@ -10,3 +10,13 @@ print (products)
 
 for p in products:
 	print (p[0], '的價格是', p[1])
+
+
+with open ('products.csv' , 'w' , encoding='utf-8') as f : 
+        #with 可自動colse檔案 ，'w' 寫入
+        #utf-8 中文編碼 ，在MAC好像沒這問題，excel好像需要加入此行
+	f.write('商品' + ',' + '價格' + '\n')
+	for p in products:
+		f.write (p[0]+ ',' + p[1] + '\n') 
+		# 逗點是一個表格（在試算表裡）
+		# \n 是換行的意思
